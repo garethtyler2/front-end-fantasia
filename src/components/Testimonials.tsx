@@ -9,6 +9,8 @@ const testimonials = [
     author: "Alexandra Chen",
     role: "CTO, TechVision",
     avatar: "AC",
+    // Added placeholder image URL instead of empty string
+    avatarSrc: "https://i.pravatar.cc/150?u=alexandra",
     delay: 0,
   },
   {
@@ -16,6 +18,8 @@ const testimonials = [
     author: "Marcus Johnson",
     role: "Director of Operations, Elevate Inc",
     avatar: "MJ",
+    // Added placeholder image URL instead of empty string
+    avatarSrc: "https://i.pravatar.cc/150?u=marcus",
     delay: 100,
   },
   {
@@ -23,6 +27,8 @@ const testimonials = [
     author: "Sophia Rodriguez",
     role: "Lead Developer, InnovateTech",
     avatar: "SR",
+    // Added placeholder image URL instead of empty string
+    avatarSrc: "https://i.pravatar.cc/150?u=sophia",
     delay: 200,
   },
 ];
@@ -55,7 +61,8 @@ const Testimonials = () => {
                 <p className="mb-6 text-sm md:text-base">{testimonial.content}</p>
                 <div className="flex items-center">
                   <Avatar className="h-10 w-10 mr-4">
-                    <AvatarImage src="" alt={testimonial.author} />
+                    {/* Use proper avatar image URL or fallback */}
+                    <AvatarImage src={testimonial.avatarSrc} alt={testimonial.author} />
                     <AvatarFallback className="bg-brand-purple/20 text-brand-purple">
                       {testimonial.avatar}
                     </AvatarFallback>
