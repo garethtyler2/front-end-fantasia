@@ -1,5 +1,5 @@
 
-import { Activity, Shield, Clipboard, Brain, Target, ChartLineUp } from "lucide-react";
+import { Activity, Shield, Clipboard, Brain, Target, BarChart } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
@@ -22,7 +22,7 @@ const featureItems = [
     link: "/direct_rehab"
   },
   {
-    icon: ChartLineUp,
+    icon: BarChart,
     title: "Progress Tracking",
     description: "Interactive tools to track progress in pain, mobility, and strength.",
     className: "border-brand-indigo/20 bg-gradient-to-b from-brand-indigo/10 to-transparent",
