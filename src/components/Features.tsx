@@ -1,50 +1,57 @@
 
-import { Activity, Shield, Zap, Layers, BarChart, Code } from "lucide-react";
+import { Activity, Shield, Clipboard, Brain, Target, ChartLineUp } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 const featureItems = [
   {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Experience unparalleled speed with our optimized infrastructure.",
+    icon: Activity,
+    title: "Accurate Identification",
+    description: "Accurately identify your injury or issue using our advanced AI diagnosis system.",
     className: "border-brand-purple/20 bg-gradient-to-b from-brand-purple/10 to-transparent",
     delay: 0,
+    link: "/injury-diagnosis"
+  },
+  {
+    icon: Clipboard,
+    title: "Personalized Rehab",
+    description: "Receive personalized rehab exercises based on your level and symptoms.",
+    className: "border-brand-blue/20 bg-gradient-to-b from-brand-blue/10 to-transparent",
+    delay: 100,
+    link: "/direct_rehab"
+  },
+  {
+    icon: ChartLineUp,
+    title: "Progress Tracking",
+    description: "Interactive tools to track progress in pain, mobility, and strength.",
+    className: "border-brand-indigo/20 bg-gradient-to-b from-brand-indigo/10 to-transparent",
+    delay: 200,
+    link: "/"
   },
   {
     icon: Shield,
-    title: "Secure by Design",
-    description: "Your data is protected with enterprise-grade security protocols.",
-    className: "border-brand-blue/20 bg-gradient-to-b from-brand-blue/10 to-transparent",
-    delay: 100,
-  },
-  {
-    icon: Layers,
-    title: "Scalable Solution",
-    description: "Grow without limitations. Our platform scales with your business.",
-    className: "border-brand-indigo/20 bg-gradient-to-b from-brand-indigo/10 to-transparent",
-    delay: 200,
-  },
-  {
-    icon: Activity,
-    title: "Real-time Analytics",
-    description: "Make data-driven decisions with powerful real-time insights.",
+    title: "Comprehensive Prehab",
+    description: "Strengthen your body with exercises designed to prevent injuries before they happen.",
     className: "border-brand-pink/20 bg-gradient-to-b from-brand-pink/10 to-transparent",
     delay: 300,
+    link: "/prehab_search"
   },
   {
-    icon: Code,
-    title: "Developer Friendly",
-    description: "Built with developers in mind. Extensive APIs and documentation.",
+    icon: Target,
+    title: "Tailored Training",
+    description: "Personalized training plans for weight loss, muscle gain, and more.",
     className: "border-brand-purple/20 bg-gradient-to-b from-brand-purple/10 to-transparent",
     delay: 400,
+    link: "/personal_training"
   },
   {
-    icon: BarChart,
-    title: "Performance Metrics",
-    description: "Comprehensive dashboards to monitor and optimize performance.",
+    icon: Brain,
+    title: "AI-Powered Excellence",
+    description: "AI-Rehab combines physiotherapy expertise with cutting-edge AI for faster recovery.",
     className: "border-brand-blue/20 bg-gradient-to-b from-brand-blue/10 to-transparent",
     delay: 500,
+    link: "/"
   },
 ];
 
@@ -54,10 +61,10 @@ const Features = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="mb-4 animate-fade-in">
-            Powerful <span className="gradient-text">Features</span>
+            The AI <span className="gradient-text">Advantage</span>
           </h2>
           <p className="text-muted-foreground animate-fade-in" style={{ animationDelay: "100ms" }}>
-            Our platform is packed with cutting-edge capabilities designed to propel your business forward.
+            AI-Rehab combines the expertise of physiotherapy with cutting-edge AI, empowering you to recover faster and optimize your physical performance—all in one place.
           </p>
         </div>
 
@@ -81,6 +88,11 @@ const Features = () => {
                 <CardDescription className="text-muted-foreground">
                   {feature.description}
                 </CardDescription>
+                {feature.link !== "/" && (
+                  <Link to={feature.link} className="text-brand-purple hover:underline text-sm mt-4 inline-block">
+                    Learn more →
+                  </Link>
+                )}
               </CardContent>
             </Card>
           ))}

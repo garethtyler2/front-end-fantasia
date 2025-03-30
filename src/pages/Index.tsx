@@ -6,7 +6,6 @@ import Testimonials from "@/components/Testimonials";
 import Metrics from "@/components/Metrics";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import SearchDemo from "@/components/SearchDemo";
 
 const Index = () => {
   return (
@@ -15,7 +14,6 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <Features />
-        <SearchDemo />
         <Testimonials />
         <Metrics />
         <CTA />
