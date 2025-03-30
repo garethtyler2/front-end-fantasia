@@ -1,103 +1,83 @@
 
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-white/10 py-12">
+    <footer className="border-t border-white/10 py-12 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="col-span-2 md:col-span-1">
-            <div className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-brand-purple to-brand-blue">
-              Quantum
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Logo and Title */}
+          <div className="flex flex-col items-start">
+            <div className="flex items-center mb-2">
+              {/* Replace with your actual logo or use text */}
+              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-purple to-brand-blue mr-2">
+                AI-Rehab
+              </span>
             </div>
             <p className="text-muted-foreground text-sm max-w-xs">
-              Transforming digital experiences with cutting-edge technology and innovative solutions.
+              Your affordable and accessible alternative to traditional physiotherapy.
             </p>
-            <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
+          </div>
+          
+          {/* Navigation Links */}
+          <div className="grid grid-cols-2 gap-8">
+            {/* Explore Links */}
+            <div>
+              <h3 className="text-sm font-medium mb-4">Explore</h3>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link to="/insights" className="text-muted-foreground hover:text-primary transition-colors">
+                    AI Rehab Insights
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/ai-physical-rehabilitation" className="text-muted-foreground hover:text-primary transition-colors">
+                    AI in Physical Rehabilitation
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/ai-prehabilitation" className="text-muted-foreground hover:text-primary transition-colors">
+                    AI in Prehabilitation
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/ai-personal-training" className="text-muted-foreground hover:text-primary transition-colors">
+                    AI-Powered Personal Training
+                  </Link>
+                </li>
+              </ul>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="text-sm font-medium mb-4">Product</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Features</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Integrations</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Changelog</a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-sm font-medium mb-4">Resources</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Documentation</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">API Reference</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Guides</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Support</a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-sm font-medium mb-4">Company</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">About</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
-              </li>
-            </ul>
+            
+            {/* About Links */}
+            <div>
+              <h3 className="text-sm font-medium mb-4">About</h3>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link to="/feedback" className="text-muted-foreground hover:text-primary transition-colors">
+                    Feedback
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            © 2023 Quantum. All rights reserved.
+            © 2023 AI-Rehab. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            </Link>
+            <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
